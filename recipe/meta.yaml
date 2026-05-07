@@ -1,6 +1,6 @@
 {% set name = "gwlearn" %}
-{% set python_min = "3.11" %}
-{% set version = "0.1.1" %}
+{% set python_min = "3.12" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gwlearn-{{ version }}.tar.gz
-  sha256: a125d559f9a38f8285b80dd1c8d89225f9c1bce87874ff25f8312af2e35d0a66
+  sha256: 29d24341f71e9851dba0cf99fd91395f788ffb8203b12d56db7c0f9d307df779
 
 build:
   noarch: python
@@ -23,13 +23,13 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - geopandas >=1.0.0
-    - joblib >=1.4.0
+    - geopandas >=1.1.0
+    - joblib >=1.5.0
     - libpysal >=4.12
-    - numpy >=1.26.0
-    - scipy >=1.12.0
-    - scikit-learn >=1.4.0
-    - pandas >=2.1.0
+    - numpy >=2.0.0
+    - scipy >=1.14.0
+    - scikit-learn >=1.5.0
+    - pandas >=2.3.0
 
 test:
   imports:
